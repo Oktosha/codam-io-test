@@ -1,11 +1,12 @@
 #include <limits.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include "codam_io.h"
 
-int main()
+int do_test(int argc, char **argv)
 {
+	(void) argc;
+	(void) argv;
 	io_write_string(STDOUT_FILENO, "HEllo!\n");
 	io_write_number(STDOUT_FILENO, INT_MAX);
 	io_write_char(STDOUT_FILENO, '\n');
@@ -35,6 +36,5 @@ int main()
 		free(line);
 	}
 	io_close(&file);
-	getchar();
 	return (0);
 }

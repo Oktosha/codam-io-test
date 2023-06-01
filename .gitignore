@@ -1,5 +1,3 @@
 .DS_Store
 *.dSYM
 *_build
-test_leaks
-test_sanitized

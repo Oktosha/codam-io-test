@@ -27,5 +27,7 @@ int do_test(int argc, char **argv)
 	io_write_string(STDOUT_FILENO, "");
 	io_out("hello %d %s %c\n", 42, "you", 'A');
 	io_err("bye %s %d %c\n", "them", -32, 'X');
+	io_write_string(STDOUT_FILENO, NULL);
+	io_out("\n");
 	return (0);
 }

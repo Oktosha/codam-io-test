@@ -7,8 +7,8 @@ LIB_NAME=libcodamio.a
 LIB_INCLUDE=../include
 CURENT_FOLDER=codam-io-test
 
-TEST_SRCS=test_basic.c test_all_lines.c
-MAIN_TEST_SRCS=main_test_assert.c
+TEST_SRCS=test_basic.c test_read_file.c
+MAIN_TEST_SRCS=main_test_assert.c main_test_wrong_format.c
 SRCS_SANITIZED=${TEST_SRCS} main_sanitized.c ${MAIN_TEST_SRCS}
 OBJS_SANITIZED=${addprefix ${BUILD_FOLDER_SANITIZED}/bin/,${SRCS_SANITIZED:.c=.o}}
 MAIN_OBJ_SANITIZED=${BUILD_FOLDER_SANITIZED}/bin/main_sanitized.o
